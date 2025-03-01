@@ -18,17 +18,17 @@ Ihre zum Zeitpunkt dieses Textes aktuelle Version 2.1.3c erzeugt diese Datei abe
 ## Welche Fehler kann die eRechnungWerkstatt reparieren?
 Die von Fakturama 2.1.3c erzeugten eRechnungen weisen beim Validator situationsbedingt folgende Probleme auf:
 1. PEPPOL-EN1631-R10: Email vom Rechnungsempfänger fehlt u.U.
-- Die Werkstatt fügt hier einfach "noreply@something.com" ein
+    - Die Werkstatt fügt hier einfach "noreply@something.com" ein
 1.  PEPPOL-EN16931-R001 (BT-23): Gechäftsprozess Deklaration fehlt
-- Die Werkstatt fügt hier urn:fdc:peppol.eu:2017:poacc:billing:01:1.0 ein
+    - Die Werkstatt fügt hier urn:fdc:peppol.eu:2017:poacc:billing:01:1.0 ein
 1. BR-DE-21 (BT-24): Die Ausweisung der genutzten Version des Standards ist nicht korrekt
-- Die Werkstatt setzt hier urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0
+    - Die Werkstatt setzt hier urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0
 1. Leere Elemente in der XML-Datei sind ungültig
-- die Werkstatt entfernt ram:GlobalID und ram:SpecifiedLegalOrganization wenn sie leer sind
+    - die Werkstatt entfernt ram:GlobalID und ram:SpecifiedLegalOrganization wenn sie leer sind
 1. Steuernummer ist falsch deklariert, wenn Kleinunternehmer keine EU VAT ID hat
-- die Werkstatt setzt hier ram:SpecifiedTaxRegistration/ram:ID auf schemeID 'FC'
+    - die Werkstatt setzt hier ram:SpecifiedTaxRegistration/ram:ID auf schemeID 'FC'
 1. Rechnungsbeträge sind an verschiedenen Stellen in der XML-Datei nicht identisch
-- die Werkstatt synchonisiert ram:BasisAmount mit ram:LineTotalAmount und ram:CalculatedAmount mit ram:TaxTotalAmount
+    - die Werkstatt synchonisiert ram:BasisAmount mit ram:LineTotalAmount und ram:CalculatedAmount mit ram:TaxTotalAmount
 
 ## Wie erzeugt man eine eRechnung mit Fakturama und bringt sie danach in die Werkstatt?
 
@@ -55,14 +55,15 @@ Die von Fakturama 2.1.3c erzeugten eRechnungen weisen beim Validator situationsb
     ```
 1. In Fakturama tragt ihr nun in den Einstellungen eure Unternehmensdaten ein
 Datei -> Einstellungen > Firmendaten
-![Firmendaten](docs/Firmendaten.png)
+![Firmendaten](./docs/Firmendaten.png)
 1. Aktiviert die Erstellung von eRechnungen in Fakturama:
 Datei -> Einstellungen -> ZUGFeRD Einstellungen
 Aktiviert den Haken "Erzeuge ZUGFeRD-Datei", setzt als Version 2.1 und wählt das Profil ZUGFERD_V2_COMFORT
-![Firmendaten](docs/ZUGFERD.png)
+![ZUGFERD](./docs/ZUGFERD.png)
 ### Der neue Rechnungserstellungsprozess
 1. Erstellt nun eine neue Rechnung, setzt insbesondere die auch die Kundenreferenz des Rechungsempfängers. Arbeitet ihr für öffentliche Auftraggeber, könnt ihr diese Leitweg-IDs Online finden, in Brandenburg z.B. [hier](https://mdfe.brandenburg.de/sixcms/media.php/9/Leitweg-ID-Gesamtverzeichnis_Land_Brandenburg_2024-07-31.pdf)
 1. Druckt die Rechnung in Fakturama. Dieser Vorgang erzeugt eine OpenOffice odt-Datei und eine PDF-Datei.
 1. Die gedruckte PDF-Datei aus Fakturama zieht ihr nun ganz einfach per Drag & Drop auf die Verknüfung zu dieser eRechnungWerkstatt (siehe Punkt 8). Es öffnet sich kurz ein Konsolenfenster, das sich autom. wieder schließt. Anschießend sollte im Ausgabe-Ordner (outputPath) die reparierte eRechnung liegen.
 1. Offnet die PDF-Datei mit Acrobat. Klickt auf die Büroklammer um die eingebettete PDF-Datei als Anhang zu sehen. Öffnet die Datei durch Doppelklick und speichert sie bei Bedarf als XML-Datei ab, um sie zur Kontrolle mit dem [E-Rechnungs-Validator](https://erechnungsvalidator.service-bw.de/) vor dem Versand zu prüfen.
+![ZUGFERD](./docs/factur-x.png)
 1. Druckt die eRechnung nach belieben aus und sendet sie an den Rechnungsempfänger per E-Mail. Der Empfänger kann die PDF-Datei, bzw. die eingebettete XML-Datei in seine Applikationen importieren und dort standardkonform digital weiterverarbeiten. 
