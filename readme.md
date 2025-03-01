@@ -55,11 +55,11 @@ Die von Fakturama 2.1.3c erzeugten eRechnungen weisen beim Validator situationsb
     ```
 1. In Fakturama tragt ihr nun in den Einstellungen eure Unternehmensdaten ein
 Datei -> Einstellungen > Firmendaten
-![Firmendaten](./docs/Firmendaten.PNG)
+![Firmendaten](./docs/Firmendaten1.png)
 1. Aktiviert die Erstellung von eRechnungen in Fakturama:
 Datei -> Einstellungen -> ZUGFeRD Einstellungen
 Aktiviert den Haken "Erzeuge ZUGFeRD-Datei", setzt als Version 2.1 und wählt das Profil ZUGFERD_V2_COMFORT
-![ZUGFERD](./docs/ZUGFERD.PNG)
+![ZUGFERD](./docs/ZUGFERD1.png)
 ### Der neue Rechnungserstellungsprozess
 1. Erstellt nun eine neue Rechnung, setzt insbesondere die auch die Kundenreferenz des Rechungsempfängers. Arbeitet ihr für öffentliche Auftraggeber, könnt ihr diese Leitweg-IDs Online finden, in Brandenburg z.B. [hier](https://mdfe.brandenburg.de/sixcms/media.php/9/Leitweg-ID-Gesamtverzeichnis_Land_Brandenburg_2024-07-31.pdf)
 1. Druckt die Rechnung in Fakturama. Dieser Vorgang erzeugt eine OpenOffice odt-Datei und eine PDF-Datei.
