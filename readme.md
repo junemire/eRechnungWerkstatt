@@ -11,7 +11,7 @@ Die Art der Rechnungslegung, insbesondere für kleine Selbstständige lässt sic
 - ab 01.01.2025 zwingt die Einführung der eRechnung MS Word zu erweitern oder dedizierte Buchhaltungssoftware einzusetzen
 
 ## Open Source Buchhaltungssystem
-Es gibt viele kommerzielle Buchhaltungs- und Büroapplikationen von namenhaften Herstellern. Alternativ bieten sich auch OpenSource Anwendungen an. Eine davon ist [Fakturama](https://www.fakturama.info/).
+Es gibt viele kommerzielle Buchhaltungs- und Büroapplikationen von namenhaften Herstellern. Alternativ bieten sich auch OpenSource Anwendungen an. Eine davon ist [FAKTURAMA](https://www.fakturama.info/).
 Sie unterstützt neben vielen anderen Büroabläufen auch das Erstellen von Rechnungen und kann also die Fiskaldaten als XML-Datei in ein generiertes PDF einbetten.
 Ihre zum Zeitpunkt dieses Textes aktuelle Version 2.1.3c erzeugt diese Datei aber in gewissen Situationen nicht ganz Standardkonform, was mit der  eRechnungWerkstatt repariert werden kann. Die Prüfung der Validität der eingebetten XML-Datei lässt sich z.B. mit dem [E-Rechnungs-Validator](https://erechnungsvalidator.service-bw.de/) aus Baden-Württemberg prüfen.
 
@@ -66,4 +66,7 @@ Aktiviert den Haken "Erzeuge ZUGFeRD-Datei", setzt als Version 2.1 und wählt da
 1. Die gedruckte PDF-Datei aus Fakturama zieht ihr nun ganz einfach per Drag & Drop auf die Verknüfung zu dieser eRechnungWerkstatt (siehe Punkt 8). Es öffnet sich kurz ein Konsolenfenster, das sich autom. wieder schließt. Anschießend sollte im Ausgabe-Ordner (outputPath) die reparierte eRechnung liegen.
 1. Offnet die PDF-Datei mit Acrobat. Klickt auf die Büroklammer um die eingebettete PDF-Datei als Anhang zu sehen. Öffnet die Datei durch Doppelklick und speichert sie bei Bedarf als XML-Datei ab, um sie zur Kontrolle mit dem [E-Rechnungs-Validator](https://erechnungsvalidator.service-bw.de/) vor dem Versand zu prüfen.
 ![PDF](./docs/factur-x.png)
-1. Druckt die eRechnung nach belieben aus und sendet sie an den Rechnungsempfänger per E-Mail. Der Empfänger kann die PDF-Datei, bzw. die eingebettete XML-Datei in seine Applikationen importieren und dort standardkonform digital weiterverarbeiten. 
+1. Druckt die eRechnung nach belieben aus und sendet sie an den Rechnungsempfänger per E-Mail. Der Empfänger kann die PDF-Datei, bzw. die eingebettete XML-Datei in seine Applikationen importieren und dort standardkonform digital weiterverarbeiten.
+
+## Ausblick
+Der einzige Meilenstein in der Roadmap von diesem Projekt ist es, mit einer zukünftigen FAKTURAMA-Version wieder überflüssig zu werden 😊
